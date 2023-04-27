@@ -14,3 +14,13 @@ fn main() {
 fn another_function() {
     println!("Another function.");
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_another_function() {
+        assert_eq!(another_function(), ());
+    }
+}
