@@ -25,6 +25,7 @@ impl Rectangle {
     }
 }
 
+#[allow(clippy::unit_cmp)]
 fn main() {
     let rect1 = Rectangle {
         width: 30,

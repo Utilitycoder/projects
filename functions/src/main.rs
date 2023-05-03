@@ -16,6 +16,7 @@ fn another_function() {
 }
 
 #[cfg(test)]
+#[allow(clippy::unit_cmp)]
 mod tests {
     use super::*;
 
