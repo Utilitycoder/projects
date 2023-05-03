@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+#[allow(clippy::unnecessary_fold)]
 fn main() {
     let mut integers: Vec<i32> = vec![1, 2, 3, 4, 5, 6, 6, 8, 1, 7, 8, 9, 10, 10];
     integers.sort();
