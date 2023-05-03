@@ -9,7 +9,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
         search_case_sensitive(&config.query, &contents)
     };
 
-    if results.len() == 0 {
+    if results.is_empty() {
         println!("No results found for '{}'", config.query);
     }
 
@@ -87,7 +87,7 @@ mod tests {
 
         let config = Config::build(args.into_iter());
 
-        assert_eq!(config.is_err(), true);
+        assert!(config.is_err());
     }
 
     #[test]
