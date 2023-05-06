@@ -1,19 +1,6 @@
 use prettytable::{row, Table};
-use std::collections::HashMap;
 use std::io;
-
-fn employee_database(details: Vec<(String, String)>) -> HashMap<String, Vec<String>> {
-    let mut employee_database: HashMap<String, Vec<String>> = HashMap::new();
-
-    for (department, employee) in details {
-        employee_database
-            .entry(department)
-            .or_insert(vec![])
-            .push(employee);
-    }
-
-    employee_database
-}
+use employee_names::employees::employee_database;
 
 fn read_input() -> String {
     let mut input_line = String::new();
