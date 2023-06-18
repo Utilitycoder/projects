@@ -1,7 +1,7 @@
 use std::{thread, sync::mpsc, time::Duration};
 
 fn main() {
-    // run_thread();
+    run_thread();
     msg_channel();
 }
 
